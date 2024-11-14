@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephon=no">
+  <meta name="description" content="NOI Norihito Ishimuraのポートフォリオです。">
+  <meta name="keywords" content="ポートフォリオ ">
+  <title>Programing | NOI Norihito Ishimura</title>
+  <link rel="icon" href="../favicon.ico">
+  <link href="../css/riset.css" rel="stylesheet" type="text/css">
+  <link href="../css/common.css" rel="stylesheet" type="text/css">
+  <link href="../css/programing.css" rel="stylesheet" type="text/css">
+</head>
+<body id="programing">
+  <div id="wrapper">
+    <header>
+      <h1><a href="../index.html"><img src="../images/logo.svg" alt="NOI Norihito Ishimura"></a></h1>
+      <nav>
+        <ul>
+          <li class="nav2"><a href="../about/index.html">About Me</a></li>
+          <li class="nav3"><a href="../programing/index.html">Programing</a></li>
+          <li class="nav4"><a href="../design/index.html">Design</a></li>
+          <li class="nav5"><a href="../skill/index.html">Skill</a></li>
+        </ul>
+      </nav>
+      <div class="sub_nav">
+        <ul>
+          <li><a href=""><img src="../images/fb.jpg" alt="facebook"></a></li>
+          <li><a href=""><img src="../images/twitter.jpg" alt="twitter"></a></li>
+          <li><a href=""><img src="../images/insta.jpg" alt="instagram"></a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="section_programing">
+        <h2 class="h2_1">Programing</h2>
+        <h3>自身で作成したプログラミングの作例を順次アップ予定です。<br/><span class="h3_eng">Examples of my programming work will be uploaded in due course.</span></h3>
+        <h3><span class="line">PG-01</span>プログラミングの作例(1)<br/><span class="h3_eng">Programming Example(1)</span></h3>
+        <p>
+          ■ jQueryのWebStorageを使用した初回のみのローディング処理
+        </p>
+        <p class="p_eng">
+        First-time-only loading process using jQuery's WebStorage
+        </p>
+        <iframe class="sc"
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=true&code=%253C%21--%2520HTML%2520--%253E%250A%250A%253Cdiv%2520class%253D%2522start%2522%253E%250A%2520%2520%253Cp%2520class%253D%25221%2522%253ENOI%2520%253D%2520Norihito%2520Ishimura%253Cbr%252F%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522main_subtxt2%2522%253E%250A%2520%2520%2520%2520%2520%2520This%2520site%2520is%2520a%2520portfolio%2520site%2520of%2520NOI.%250A%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%253C%252Fp%253E%250A%2520%2520%253Cp%2520class%253D%25222%2522%253E%250A%2520%2520%2520%2520%253Cimg%2520src%253D%2522images%252Flogo.svg%2522%2520alt%253D%2522NOI%2520Norihito%2520Ishimura%2522%253E%250A%2520%2520%253C%252Fp%253E%250A%253C%252Fdiv%253E%250A%250A%253C%21--%2520CSS%2520--%253E%250A%250A.start%2520%257B%250A%2520%2520background%253A%2520%2523FFF%253B%250A%2520%2520position%253A%2520fixed%253B%250A%2520%2520top%253A%25200%253B%250A%2520%2520left%253A%25200%253B%250A%2520%2520height%253A%2520100vh%253B%250A%2520%2520width%253A%2520100%2525%253B%250A%257D%250A.start%2520p%2520%257B%250A%2520%2520font-size%253A%25202.3rem%253B%250A%2520%2520width%253A%252093.75%2525%253B%250A%2520%2520padding%253A0%25203.13%2525%253B%250A%2520%2520word-break%253A%2520break-all%253B%250A%2520%2520text-align%253A%2520center%253B%250A%2520%2520position%253A%2520fixed%253B%250A%2520%2520left%253A%252050%2525%253B%250A%2520%2520top%253A%252050%2525%253B%250A%2520%2520transform%253A%2520translate%28-50%2525%252C%2520-50%2525%29%253B%250A%2520%2520display%253A%2520none%253B%250A%2520%2520font-family%253A%2520Arial%253B%250A%2520%2520letter-spacing%253A0.1em%253B%250A%257D%250A%250A%253C%21--%2520JS%28jQuery%25E3%2581%25AEWebStorage%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%29%2520--%253E%250A%250A%2524%28function%2520%28%29%2520%257B%250A%2509var%2520opAnime%2520%253D%2520function%2520%28%29%2520%257B%250A%2509%2509if%2520%28sessionStorage.getItem%28%27access%27%29%29%2520%257B%2520%252F%252F2%25E5%259B%259E%25E7%259B%25AE%25E4%25BB%25A5%25E9%2599%258D%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E6%2599%2582%25E3%2581%25AE%25E5%2587%25A6%25E7%2590%2586%250A%2509%2509%2509%2524%28%2522.start%2522%29.css%28%27display%27%252C%2520%27none%27%29%253B%250A%2509%2509%257D%2520else%2520%257B%2520%252F%252F%25E5%2588%259D%25E5%259B%259E%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E6%2599%2582%25E3%2581%25AE%25E5%2587%25A6%25E7%2590%2586%250A%2509%2509%2509sessionStorage.setItem%28%27access%27%252C%2520%27firstTime%27%29%253B%250A%2509%2509%2509setTimeout%28function%28%29%2520%257B%250A%2509%2509%2509%2509%2524%28%27.start%2520.1%27%29.fadeIn%281600%29%253B%250A%2509%2509%2509%257D%252C500%29%253B%2520%252F%252F0.5%25E7%25A7%2592%25E5%25BE%258C%25E3%2581%25AB%25E3%2583%2595%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25A4%25E3%2583%25B3%250A%2509%2509%2509setTimeout%28function%28%29%2520%257B%250A%2509%2509%2509%2509%2524%28%27.start%2520.1%27%29.fadeOut%28500%29%253B%250A%2509%2509%2509%257D%252C3000%29%253B%2520%252F%252F3%25E7%25A7%2592%25E5%25BE%258C%25E3%2583%2595%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25A2%25E3%2582%25A6%25E3%2583%2588%250A%2509%2509%2509setTimeout%28function%28%29%2520%257B%250A%2509%2509%2509%2509%2524%28%27.start%2520.2%27%29.fadeIn%281600%29%253B%250A%2509%2509%2509%257D%252C3500%29%253B%2520%252F%252F3.5%25E7%25A7%2592%25E5%25BE%258C%25E3%2581%25AB%25E3%2583%25AD%25E3%2582%25B4%25E3%2582%2592%25E3%2583%2595%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25A4%25E3%2583%25B3%250A%2509%2509%2509setTimeout%28function%28%29%2520%257B%250A%2509%2509%2509%2509%2524%28%27.start%27%29.fadeOut%28500%29%253B%250A%2509%2509%2509%257D%252C6000%29%253B%2520%252F%252F6%25E7%25A7%2592%25E5%25BE%258C%25E3%2581%25AB%25E3%2583%2595%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25A2%25E3%2582%25A6%25E3%2583%2588%250A%2509%2509%257D%250A%2509%257D%250A%2509opAnime%28%29%250A%257D"
+          style="width: 780px; height: 1340px; border:0; transform: scale(1); overflow:hidden;"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <p>
+          このポートフォリオサイトで使用しているローディング処理のソースコードになります。<br/>
+          jQueryのWebStorageを使用し、初回時にsessionStorageにデータをセット（setItem）。<br/>
+          2回目以降はデータを取得（getItem）し、セットされた値と一致すれば、<br/>
+          クラス「.start」を「display: none」しています。
+        </p>
+        <p class="p_eng">
+          This is the source code for the loading process used in this portfolio site.<br/>Using jQuery's WebStorage, data is set in sessionStorage the first time (setItem),<br/>data is retrieved the second and subsequent times (getItem), and if the set values match,<br/>the ". start" class is "display: none".
+        </p>
+      <h3><span class="line">PG-02</span>プログラミングの作例(2)<br/><span class="h3_eng">Programming Example(2)</span></h3>
+      <p>順次公開予定です。</p>
+      <p class="p_eng">The information will be released sequentially.</p>
+      <h3><span class="line">PG-03</span>プログラミングの作例(3)<br/><span class="h3_eng">Programming Example(3)</span></h3>
+      <p>順次公開予定です。</p>
+      <p class="p_eng">The information will be released sequentially.</p>
+      <div class="botton">
+        <p><a href="#wrapper"><img src="../images/botton.png" width="51" alt="上に戻る"></a></p>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <ul>
+      <li class="nav1"><a href="../index.html">Top</a></li>
+      <li class="nav2"><a href="../about/index.html">About Me</a></li>
+      <li class="nav3"><a href="../programing/index.html">Programing</a></li>
+      <li class="nav4"><a href="../design/index.html">Design</a></li>
+      <li class="nav5"><a href="../skill/index.html">Skill</a></li>
+    </ul>
+    <p><small>COPYRIGHT &copy; NOI ALL righ ts reserved.</small></p>
+  </footer>
+</main>
+</body>
+</html>
