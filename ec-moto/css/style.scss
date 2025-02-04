@@ -58,7 +58,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../img/Firefly\ おしゃればインテリア雑貨が配置された部屋\ 14391.jpg);
+  background-image: url(../img/main.jpg);
   background-size: cover;
 }
 .main-visual .visual-content .content-box {
@@ -142,6 +142,9 @@ nav ul li a {
   display: flex;
   justify-content: space-between;
   // margin-bottom: -30px;
+  @include mq(sp) {
+    margin-bottom: 20px;
+  }
 }
 
 .filter-options,
@@ -193,7 +196,7 @@ nav ul li a {
 
 .product-details h3,
 .gift-details h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 0;
 }
 
@@ -476,22 +479,22 @@ footer p {
 .purple {
   background-color: purple !important;
 }
-.category-buttons button:nth-child(1) {
-  background-image: url(../img/Firefly\ キッチン用品の画像\ 10412.jpg);
-  background-size: cover;
-}
-.category-buttons button:nth-child(2) {
-  background-image: url(../img/Firefly\ オフィス雑貨の画像\ 10412.jpg);
-  background-size: cover;
-}
-.category-buttons button:nth-child(3) {
-  background-image: url(../img/Firefly\ インテリア雑貨の画像\ 14391.jpg);
-  background-size: cover;
-}
-.category-buttons button:nth-child(4) {
-  background-image: url(../img/Firefly\ 部屋にある収納雑貨の画像\ 10412.jpg);
-  background-size: cover;
-}
+// .category-buttons button:nth-child(1) {
+//   background-image: url(../img/Firefly\ キッチン用品の画像\ 10412.jpg);
+//   background-size: cover;
+// }
+// .category-buttons button:nth-child(2) {
+//   background-image: url(../img/Firefly\ オフィス雑貨の画像\ 10412.jpg);
+//   background-size: cover;
+// }
+// .category-buttons button:nth-child(3) {
+//   background-image: url(../img/Firefly\ インテリア雑貨の画像\ 14391.jpg);
+//   background-size: cover;
+// }
+// .category-buttons button:nth-child(4) {
+//   background-image: url(../img/Firefly\ 部屋にある収納雑貨の画像\ 10412.jpg);
+//   background-size: cover;
+// }
 .category-buttons button:hover {
   background-color: #ddd;
 }
@@ -621,6 +624,7 @@ header {
   background-color: #333;
   color: #fff;
   padding: 15px 20px;
+  min-height: 44px;
   @include mq(sp) {
     flex-direction: column;
     padding: 10px;
