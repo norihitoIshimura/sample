@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生活雑貨ショップ - ギフトセット</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>生活雑貨ショップ</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../product/index.html">商品一覧</a></li>
+          <li><a href="index.html">ギフトセット</a></li>
+          <li><a href="../cart/index.html">カート</a></li>
+          <li><a href="../login/index.html">ログイン</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="gift-section">
+      <div class="filter-bar">
+        <div class="filter-options">
+          <label for="category">カテゴリ</label>
+          <select id="category">
+            <option value="all">すべての商品</option>
+            <option value="kitchen">キッチン用品</option>
+            <option value="office">オフィス用品</option>
+            <option value="interior">インテリア</option>
+          </select>
+        </div>
+
+        <div class="sort-options">
+          <label for="sort">並び替え</label>
+          <select id="sort">
+            <option value="newest">新着順</option>
+            <option value="price-low-to-high">価格が安い順</option>
+            <option value="price-high-to-low">価格が高い順</option>
+          </select>
+        </div>
+      </div>
+      <h2>おすすめギフトセット</h2>
+      <div class="gift-container">
+        <!-- ギフトセット1 -->
+        <div class="gift-item">
+          <img
+            src="../img/Firefly リラックスできるアイテムを詰め込んだ癒しのセット 10412.jpg"
+            alt="癒しのギフトセット"
+          />
+          <div class="gift-details">
+            <h3>癒しのギフトセット</h3>
+            <p class="price">¥5,000</p>
+            <p class="rating">★★★★☆ (120件のレビュー)</p>
+            <p>リラックスできるアイテムを詰め込んだ癒しのセットです。</p>
+            <button class="more">
+              <a href="detail/detail01.html">詳しく見る</a>
+            </button>
+            <div class="addFlex">
+              <label for="quantity">数量:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ギフトセット2 -->
+        <div class="gift-item">
+          <img
+            src="../img/Firefly おしゃれなキッチンアイテムを集めたギフトセット。 10412.jpg"
+            alt="キッチンエレガントセット"
+          />
+          <div class="gift-details">
+            <h3>キッチンエレガントセット</h3>
+            <p class="price">¥6,800</p>
+            <p class="rating">★★★★☆ (120件のレビュー)</p>
+            <p>おしゃれなキッチンアイテムを集めたギフトセット。</p>
+            <button class="more">
+              <a href="detail/detail02.html">詳しく見る</a>
+            </button>
+            <label for="quantity">数量:</label>
+            <div class="addFlex">
+              <label for="quantity">数量:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ギフトセット3 -->
+        <div class="gift-item">
+          <img
+            src="../img/Firefly ホリデーシーズンにぴったりのアロマ雑貨アイテム詰め合わせ。 94376.jpg"
+            alt="ホリデーシーズンセット"
+          />
+          <div class="gift-details">
+            <h3>ホリデーシーズンセット</h3>
+            <p class="price">¥8,200</p>
+            <p class="rating">★★★★☆ (120件のレビュー)</p>
+            <p>ホリデーシーズンにぴったりのアイテムを詰め合わせ。</p>
+            <button class="more">
+              <a href="detail/detail03.html">詳しく見る</a>
+            </button>
+            <div class="addFlex">
+              <label for="quantity">数量:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <p>&copy; 2025 生活雑貨ショップ</p>
+      </div>
+    </footer>
+  </body>
+</html>

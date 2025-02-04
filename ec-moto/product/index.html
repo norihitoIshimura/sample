@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品一覧 - 生活雑貨ショップ</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>生活雑貨ショップ</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="index.html">商品一覧</a></li>
+          <li><a href="../gift/index.html">ギフトセット</a></li>
+          <li><a href="../cart/index.html">カート</a></li>
+          <li><a href="../login/index.html">ログイン</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="product-section">
+      <div class="filter-bar">
+        <div class="filter-options">
+          <label for="category">カテゴリ</label>
+          <select id="category">
+            <option value="all">すべての商品</option>
+            <option value="kitchen">キッチン用品</option>
+            <option value="office">オフィス用品</option>
+            <option value="interior">インテリア</option>
+          </select>
+        </div>
+
+        <div class="sort-options">
+          <label for="sort">並び替え</label>
+          <select id="sort">
+            <option value="newest">新着順</option>
+            <option value="price-low-to-high">価格が安い順</option>
+            <option value="price-high-to-low">価格が高い順</option>
+          </select>
+        </div>
+      </div>
+      <h2>商品一覧</h2>
+
+      <!-- 商品1 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly おしゃれなキッチン収納にぴったりのガラスキャニスター。 66228.jpg"
+          alt="モダンなガラスキャニスター"
+        />
+        <div class="product-details">
+          <h3>モダンなガラスキャニスター</h3>
+          <p class="price">¥1,800</p>
+          <!-- <p class="rating">★★★★☆ (120件のレビュー)</p> -->
+          <p>おしゃれなキッチン収納にぴったりなキャニスター。</p>
+          <button class="more">
+            <a href="detail/detail01.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品2 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly デスクの整理整頓に最適なシンプルなオーガナイザー。 2062.jpg"
+          alt="シンプルなデスクオーガナイザー"
+        />
+        <div class="product-details">
+          <h3>シンプルなデスクオーガナイザー</h3>
+          <p class="price">¥2,200</p>
+          <!-- <p class="rating">★★★☆☆ (85件のレビュー)</p> -->
+          <p>デスクの整理整頓に最適なシンプルなオーガナイザー。</p>
+          <button class="more">
+            <a href="detail/detail02.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品3 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly 寒い季節にぴったりのふわふわコットンブランケット。 2062.jpg"
+          alt="ふわふわコットンブランケット"
+        />
+        <div class="product-details">
+          <h3>ふわふわコットンブランケット</h3>
+          <p class="price">¥3,000</p>
+          <!-- <p class="rating">★★★★★ (230件のレビュー)</p> -->
+          <p>寒い季節にぴったりのふわふわコットンブランケット。</p>
+          <button class="more">
+            <a href="detail/detail03.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品4 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly シンプルで使いやすいマグカップセット。 84798.jpg"
+          alt="シンプルなマグカップセット"
+        />
+        <div class="product-details">
+          <h3>シンプルなマグカップセット</h3>
+          <p class="price">¥1,500</p>
+          <!-- <p class="rating">★★★★☆ (78件のレビュー)</p> -->
+          <p>シンプルで使いやすいマグカップセット。</p>
+          <button class="more">
+            <a href="detail/detail04.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品5 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly 部屋の整理整頓に便利な収納ボックスセット。 84158.jpg"
+          alt="収納ボックスセット"
+        />
+        <div class="product-details">
+          <h3>収納ボックスセット</h3>
+          <p class="price">¥2,800</p>
+          <!-- <p class="rating">★★★★☆ (98件のレビュー)</p> -->
+          <p>整理整頓に便利な収納ボックスセット。</p>
+          <button class="more">
+            <a href="detail/detail05.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品6 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly おしゃれなインテリアにぴったりな植物ポット。 94376.jpg"
+          alt="インテリア用植物ポット"
+        />
+        <div class="product-details">
+          <h3>インテリア用植物ポット</h3>
+          <p class="price">¥2,500</p>
+          <!-- <p class="rating">★★★★☆ (112件のレビュー)</p> -->
+          <p>おしゃれなインテリアにぴったりな植物ポット。</p>
+          <button class="more">
+            <a href="detail/detail06.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品7 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly 目に優しいおしゃれなLEDデスクライト 14391.jpg"
+          alt=""
+        />
+        <div class="product-details">
+          <h3>スタイリッシュなLEDデスクライト</h3>
+          <p class="price">¥3,500</p>
+          <!-- <p class="rating">★★★★☆ (112件のレビュー)</p> -->
+          <p>目に優しいLEDデスクライトで快適な作業環境を。</p>
+          <button class="more">
+            <a href="detail/detail07.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品8 -->
+      <div class="product-item">
+        <img src="../img/Firefly 木製ブックスタンド 14391.jpg" alt="" />
+        <div class="product-details">
+          <h3>木製ブックスタンド</h3>
+          <p class="price">¥3,500</p>
+          <!-- <p class="rating">★★★★☆ (95件のレビュー)</p> -->
+          <p>本棚をスッキリ整理できるおしゃれなブックスタンド。</p>
+          <button class="more">
+            <a href="detail/detail08.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品9 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly リラックス空間を演出するアロマディフューザー。 14391.jpg"
+          alt=""
+        />
+        <div class="product-details">
+          <h3>アロマディフューザーセット</h3>
+          <p class="price">¥4,200</p>
+          <!-- <p class="rating">★★★★★ (160件のレビュー)</p> -->
+          <p>リラックス空間を演出するアロマディフューザー。</p>
+          <button class="more">
+            <a href="detail/detail09.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品10 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly お風呂で音楽を楽しめるBluetoothスピーカー。 84158.jpg"
+          alt=""
+        />
+        <div class="product-details">
+          <h3>防水バスルームスピーカー</h3>
+          <p class="price">¥3,800</p>
+          <!-- <p class="rating">★★★★☆ (120件のレビュー)</p> -->
+          <p>お風呂で音楽を楽しめるBluetoothスピーカー。</p>
+          <button class="more">
+            <a href="detail/detail10.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品11 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly シンプルでおしゃれな北欧柄のコースター4枚セット。 94376.jpg"
+          alt=""
+        />
+        <div class="product-details">
+          <h3>北欧デザインコースターセット</h3>
+          <p class="price">¥1,300</p>
+          <p class="rating">★★★★☆ (70件のレビュー)</p>
+          <p>シンプルでおしゃれなコースター4枚セット。</p>
+          <button class="more">
+            <a href="detail/detail11.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品12 -->
+      <div class="product-item">
+        <img
+          src="../img/Firefly 持ち運びに便利なエコバッグ。 14391.jpg"
+          alt=""
+        />
+        <div class="product-details">
+          <h3>折りたたみ式エコバッグ</h3>
+          <p class="price">¥1,000</p>
+          <!-- <p class="rating">★★★★☆ (85件のレビュー)</p> -->
+          <p>持ち運びに便利なコンパクトエコバッグ。</p>
+          <button class="more">
+            <a href="detail/detail12.html">詳しく見る</a>
+          </button>
+          <div class="addFlex">
+            <label for="quantity">数量:</label>
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button class="add-to-cart">カートに追加</button>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <a href="#">前のページ</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">次のページ</a>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 生活雑貨ショップ</p>
+    </footer>
+  </body>
+</html>
