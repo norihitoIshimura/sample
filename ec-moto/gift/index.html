@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生活雑貨ショップ - ギフトセット</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>生活雑貨ショップ</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../product/index.html">商品一覧</a></li>
+          <li><a href="index.html">ギフトセット</a></li>
+          <li><a href="../cart/index.html">カート</a></li>
+          <li><a href="../login/index.html">ログイン</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="gift-section">
+      <div class="filter-bar">
+        <div class="filter-options">
+          <label for="category">カテゴリ</label>
+          <select id="category">
+            <option value="all">すべての商品</option>
+            <option value="kitchen">キッチン用品</option>
+            <option value="office">オフィス用品</option>
+            <option value="interior">インテリア</option>
+          </select>
+        </div>
+
+        <div class="sort-options">
+          <label for="sort">並び替え</label>
+          <select id="sort">
+            <option value="newest">新着順</option>
+            <option value="price-low-to-high">価格が安い順</option>
+            <option value="price-high-to-low">価格が高い順</option>
+          </select>
+        </div>
+      </div>
+      <h2>おすすめギフトセット</h2>
+      <div class="gift-container">
+        <!-- ギフトセット1 -->
+        <div class="gift-item">
+          <img src="../img/img13.jpg" alt="癒しのギフトセット" />
+          <div class="gift-details">
+            <h3>癒しのギフトセット</h3>
+            <p class="price">¥5,000</p>
+            <!-- <p class="rating">★★★★☆ (120件のレビュー)</p> -->
+            <p>リラックスできるアイテムを詰め込んだ癒しのセットです。</p>
+            <button class="more">
+              <a href="detail/detail01.html">詳しく見る</a>
+            </button>
+            <div class="addFlex">
+              <label for="quantity">数量:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ギフトセット2 -->
+        <div class="gift-item">
+          <img src="../img/img14.jpg" alt="キッチンエレガントセット" />
+          <div class="gift-details">
+            <h3>キッチンエレガントセット</h3>
+            <p class="price">¥6,800</p>
+            <!-- <p class="rating">★★★★☆ (120件のレビュー)</p> -->
+            <p>おしゃれなキッチンアイテムを集めたギフトセット。</p>
+            <button class="more">
+              <a href="detail/detail02.html">詳しく見る</a>
+            </button>
+            <label for="quantity">数量:</label>
+            <div class="addFlex">
+              <label for="quantity">数量:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ギフトセット3 -->
+        <div class="gift-item">
+          <img src="../img/img15.jpg" alt="ホリデーシーズンセット" />
+          <div class="gift-details">
+            <h3>ホリデーシーズンセット</h3>
+            <p class="price">¥8,200</p>
+            <!-- <p class="rating">★★★★☆ (120件のレビュー)</p> -->
+            <p>ホリデーシーズンにぴったりのアイテムを詰め合わせ。</p>
+            <button class="more">
+              <a href="detail/detail03.html">詳しく見る</a>
+            </button>
+            <div class="addFlex">
+              <label for="quantity">数量:</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <p>&copy; 2025 生活雑貨ショップ</p>
+      </div>
+    </footer>
+
+    <script>
+      // 商品データ（例として固定）
+      const products = [
+        {
+          id: 1,
+          name: "癒しのギフトセット",
+          price: 5000,
+          category: "interior",
+          img: "img/img13.jpg",
+          description: "リラックスできるアイテムを詰め込んだ癒しのセットです。",
+        },
+        {
+          id: 2,
+          name: "キッチンエレガントセット",
+          price: 6800,
+          category: "kitchen",
+          img: "img/img14.jpg",
+          description: "おしゃれなキッチンアイテムを集めたギフトセット。",
+        },
+        {
+          id: 3,
+          name: "ホリデーシーズンセット",
+          price: 8200,
+          category: "interior",
+          img: "img/img15.jpg",
+          description: "ホリデーシーズンにぴったりのアイテムを詰め合わせ。",
+        },
+      ];
+
+      // 商品表示関数
+      function displayProducts(filteredProducts) {
+        const productContainer = document.querySelector(".gift-container");
+        productContainer.innerHTML = ""; // 既存の商品の表示を消す
+
+        filteredProducts.forEach((product) => {
+          const productHTML = `
+            <div class="product-item">
+              <img src="../${product.img}" alt="${product.name}" />
+              <div class="product-details">
+                <h3>${product.name}</h3>
+                <p class="price">¥${product.price}</p>
+                <p>${product.description}</p>
+                <button class="more">
+                  <a href="detail/detail${product.id}.html">詳しく見る</a>
+                </button>
+                <div class="addFlex">
+                  <label for="quantity">数量:</label>
+                  <select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <button class="add-to-cart">カートに追加</button>
+                </div>
+              </div>
+            </div>
+          `;
+          productContainer.innerHTML += productHTML;
+        });
+      }
+
+      // カテゴリーフィルタ
+      function filterByCategory() {
+        const category = document.querySelector("#category").value;
+        let filteredProducts = products;
+
+        if (category !== "all") {
+          filteredProducts = products.filter(
+            (product) => product.category === category
+          );
+        }
+
+        // 並び替えも含めて表示
+        handleSorting(filteredProducts);
+      }
+
+      // 並び替え
+      function handleSorting(productsToSort) {
+        const sortValue = document.querySelector("#sort").value;
+        let sortedProducts = [...productsToSort];
+
+        if (sortValue === "price-low-to-high") {
+          sortedProducts.sort((a, b) => a.price - b.price);
+        } else if (sortValue === "price-high-to-low") {
+          sortedProducts.sort((a, b) => b.price - a.price);
+        } else if (sortValue === "newest") {
+          // 新着順はIDを使って仮想的に実装（IDが小さいほど古い）
+          sortedProducts.sort((a, b) => b.id - a.id);
+        }
+
+        displayProducts(sortedProducts);
+      }
+
+      // イベントリスナーを追加
+      window.addEventListener("DOMContentLoaded", () => {
+        // 初期表示はすべての商品
+        displayProducts(products);
+
+        // カテゴリー選択変更時
+        document
+          .querySelector("#category")
+          .addEventListener("change", filterByCategory);
+
+        // 並び替え選択変更時
+        document.querySelector("#sort").addEventListener("change", () => {
+          filterByCategory(); // カテゴリーフィルタを再度適用
+        });
+      });
+    </script>
+  </body>
+</html>
