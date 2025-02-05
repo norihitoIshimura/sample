@@ -67,7 +67,7 @@
       </div>
 
       <h2>人気商品</h2>
-      <div class="product-container">
+      <div class="product-container-A">
         <!-- 商品1 -->
         <div class="product-item">
           <img src="img/img01.jpg" alt="モダンなガラスキャニスター" />
@@ -181,8 +181,8 @@
     <section class="product-section">
       <div class="filter-bar">
         <div class="filter-options">
-          <label for="category">カテゴリ</label>
-          <select id="category">
+          <label for="category2">カテゴリ</label>
+          <select id="category2">
             <option value="all">すべての商品</option>
             <option value="kitchen">キッチン用品</option>
             <option value="office">オフィス用品</option>
@@ -191,8 +191,8 @@
         </div>
 
         <div class="sort-options">
-          <label for="sort">並び替え</label>
-          <select id="sort">
+          <label for="sort2">並び替え</label>
+          <select id="sort2">
             <option value="newest">新着順</option>
             <option value="price-low-to-high">価格が安い順</option>
             <option value="price-high-to-low">価格が高い順</option>
@@ -201,7 +201,7 @@
       </div>
 
       <h2>新着商品</h2>
-      <div class="product-container">
+      <div class="product-container-B">
         <!-- 商品9 -->
         <div class="product-item">
           <img src="img/img09.jpg" alt="" />
@@ -390,86 +390,126 @@
         },
       ];
 
-      // 商品表示関数
-      function displayProducts(filteredProducts) {
-        const productContainer = document.querySelector(".product-container");
-        productContainer.innerHTML = ""; // 既存の商品の表示を消す
+      // 商品を表示する関数（共通）
+      function displayProducts(filteredProducts, containerSelector) {
+        const productContainer = document.querySelector(containerSelector);
+        if (!productContainer) {
+          console.error(`${containerSelector} が見つかりません。`);
+          return;
+        }
+        productContainer.innerHTML = ""; // 既存の商品をクリア
 
         filteredProducts.slice(0, 4).forEach((product) => {
           const productHTML = `
-            <div class="product-item">
-              <img src="${product.img}" alt="${product.name}" />
-              <div class="product-details">
-                <h3>${product.name}</h3>
-                <p class="price">¥${product.price}</p>
-                <p>${product.description}</p>
-                <button class="more">
-                  <a href="product/detail/detail${product.id}.html">詳しく見る</a>
-                </button>
-                <div class="addFlex">
-                  <label for="quantity">数量:</label>
-                  <select id="quantity" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <button class="add-to-cart">カートに追加</button>
-                </div>
-              </div>
+        <div class="product-item">
+          <img src="${product.img}" alt="${product.name}" />
+          <div class="product-details">
+            <h3>${product.name}</h3>
+            <p class="price">¥${product.price}</p>
+            <p>${product.description}</p>
+            <button class="more">
+              <a href="product/detail/detail${product.id}.html">詳しく見る</a>
+            </button>
+            <div class="addFlex">
+              <label for="quantity-${product.id}">数量:</label>
+              <select id="quantity-${product.id}" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button class="add-to-cart">カートに追加</button>
             </div>
-          `;
+          </div>
+        </div>
+      `;
           productContainer.innerHTML += productHTML;
         });
       }
 
-      // カテゴリーフィルタ
-      function filterByCategory() {
-        const category = document.querySelector("#category").value;
-        let filteredProducts = products;
+      // **セットA: カテゴリー＆並び替え処理**
+      function filterByCategoryA() {
+        const categoryA = document.querySelector("#category").value || "all";
+        let filteredProducts = [...products];
 
-        if (category !== "all") {
-          filteredProducts = products.filter(
-            (product) => product.category === category
+        if (categoryA !== "all") {
+          filteredProducts = filteredProducts.filter(
+            (product) => product.category === categoryA
           );
         }
 
-        // 並び替えも含めて表示
-        handleSorting(filteredProducts);
+        handleSortingA(filteredProducts);
       }
 
-      // 並び替え
-      function handleSorting(productsToSort) {
-        const sortValue = document.querySelector("#sort").value;
+      function handleSortingA(productsToSort) {
+        const sortA = document.querySelector("#sort").value || "default";
         let sortedProducts = [...productsToSort];
 
-        if (sortValue === "price-low-to-high") {
+        if (sortA === "price-low-to-high") {
           sortedProducts.sort((a, b) => a.price - b.price);
-        } else if (sortValue === "price-high-to-low") {
+        } else if (sortA === "price-high-to-low") {
           sortedProducts.sort((a, b) => b.price - a.price);
-        } else if (sortValue === "newest") {
-          // 新着順はIDを使って仮想的に実装（IDが小さいほど古い）
+        } else if (sortA === "newest") {
           sortedProducts.sort((a, b) => b.id - a.id);
         }
 
-        displayProducts(sortedProducts);
+        displayProducts(sortedProducts, ".product-container-A");
+      }
+
+      // **セットB: カテゴリー＆並び替え処理**
+      function filterByCategoryB() {
+        const categoryB = document.querySelector("#category2").value || "all";
+        let filteredProducts = [...products];
+
+        if (categoryB !== "all") {
+          filteredProducts = filteredProducts.filter(
+            (product) => product.category === categoryB
+          );
+        }
+
+        handleSortingB(filteredProducts);
+      }
+
+      function handleSortingB(productsToSort) {
+        const sortB = document.querySelector("#sort2").value || "default";
+        let sortedProducts = [...productsToSort];
+
+        if (sortB === "price-low-to-high") {
+          sortedProducts.sort((a, b) => a.price - b.price);
+        } else if (sortB === "price-high-to-low") {
+          sortedProducts.sort((a, b) => b.price - a.price);
+        } else if (sortB === "newest") {
+          sortedProducts.sort((a, b) => b.id - a.id);
+        }
+
+        displayProducts(sortedProducts, ".product-container-B");
       }
 
       // イベントリスナーを追加
       window.addEventListener("DOMContentLoaded", () => {
-        // 初期表示はすべての商品
-        displayProducts(products);
+        if (!products || !Array.isArray(products)) {
+          console.error("products 配列が正しく定義されていません。");
+          return;
+        }
 
-        // カテゴリー選択変更時
-        document
-          .querySelector("#category")
-          .addEventListener("change", filterByCategory);
+        // **初期表示**
+        displayProducts(products, ".product-container-A"); // セットAの商品表示
+        displayProducts(products, ".product-container-B"); // セットBの商品表示
 
-        // 並び替え選択変更時
-        document.querySelector("#sort").addEventListener("change", () => {
-          filterByCategory(); // カテゴリーフィルタを再度適用
-        });
+        // **セットA: #category & #sort のイベントリスナー**
+        const categoryA = document.querySelector("#category");
+        const sortA = document.querySelector("#sort");
+
+        categoryA.addEventListener("change", filterByCategoryA);
+        sortA.addEventListener("change", filterByCategoryA);
+
+        // **セットB: #category2 & #sort2 のイベントリスナー**
+        const categoryB = document.querySelector("#category2");
+        const sortB = document.querySelector("#sort2");
+
+        categoryB.addEventListener("change", filterByCategoryB);
+        sortB.addEventListener("change", filterByCategoryB);
       });
     </script>
   </body>
