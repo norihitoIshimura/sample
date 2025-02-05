@@ -322,7 +322,7 @@
       </div>
     </footer>
     <script>
-      // 商品データ（例として固定）
+      // 商品データ
       const products = [
         {
           id: 1,
@@ -357,7 +357,7 @@
           description: "シンプルで使いやすいマグカップセット。",
         },
         {
-          id: 5,
+          id: 9,
           name: "アロマディフューザーセット",
           price: 4200,
           category: "interior",
@@ -365,7 +365,7 @@
           description: "リラックス空間を演出するアロマディフューザー。",
         },
         {
-          id: 6,
+          id: 10,
           name: "防水バスルームスピーカー",
           price: 3800,
           category: "interior",
@@ -373,7 +373,7 @@
           description: "お風呂で音楽を楽しめるBluetoothスピーカー。",
         },
         {
-          id: 7,
+          id: 11,
           name: "北欧デザインコースターセット",
           price: 1300,
           category: "interior",
@@ -381,7 +381,7 @@
           description: "シンプルでおしゃれなコースター4枚セット。",
         },
         {
-          id: 8,
+          id: 12,
           name: "折りたたみ式エコバッグ",
           price: 1000,
           category: "kitchen",
@@ -457,10 +457,10 @@
         displayProducts(sortedProducts, ".product-container-A");
       }
 
-      // **セットB: カテゴリー＆並び替え処理**
+      // **セットB: カテゴリー＆並び替え処理（id 9 以上限定）**
       function filterByCategoryB() {
         const categoryB = document.querySelector("#category2").value || "all";
-        let filteredProducts = [...products];
+        let filteredProducts = products.filter((product) => product.id >= 9); // idが9以上の商品のみ対象
 
         if (categoryB !== "all") {
           filteredProducts = filteredProducts.filter(
@@ -495,21 +495,26 @@
 
         // **初期表示**
         displayProducts(products, ".product-container-A"); // セットAの商品表示
-        displayProducts(products, ".product-container-B"); // セットBの商品表示
+        displayProducts(
+          products.filter((product) => product.id >= 9),
+          ".product-container-B"
+        ); // セットB（id9以上）
 
         // **セットA: #category & #sort のイベントリスナー**
-        const categoryA = document.querySelector("#category");
-        const sortA = document.querySelector("#sort");
-
-        categoryA.addEventListener("change", filterByCategoryA);
-        sortA.addEventListener("change", filterByCategoryA);
+        document
+          .querySelector("#category")
+          .addEventListener("change", filterByCategoryA);
+        document
+          .querySelector("#sort")
+          .addEventListener("change", filterByCategoryA);
 
         // **セットB: #category2 & #sort2 のイベントリスナー**
-        const categoryB = document.querySelector("#category2");
-        const sortB = document.querySelector("#sort2");
-
-        categoryB.addEventListener("change", filterByCategoryB);
-        sortB.addEventListener("change", filterByCategoryB);
+        document
+          .querySelector("#category2")
+          .addEventListener("change", filterByCategoryB);
+        document
+          .querySelector("#sort2")
+          .addEventListener("change", filterByCategoryB);
       });
     </script>
   </body>
