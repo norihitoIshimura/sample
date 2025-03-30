@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <meta name="description" content="架空のLP" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body id="main">
+    <header>
+      <div class="header">
+        <div class="mainImgPc">
+          <img src="img/main.jpg" alt="架空のLP画像です" />
+        </div>
+        <div class="mainImgSp">
+          <img src="img/main-sp.jpg" alt="架空のLP画像です" />
+        </div>
+        <div class="mainCc">
+          <img class="ccImg" src="img/main-cc.png" alt="”キャッチコピー" />
+        </div>
+        <div class="openbtn"><span></span><span></span><span></span></div>
+        <nav class="sideNav">
+          <h1 class="mainLogo">
+            <img src="img/logo.png" alt="メインロゴ" />
+          </h1>
+          <ul class="navList">
+            <li class="item"><a href="#about">子氷（こおり）について</a></li>
+            <li class="item"><a href="#seihou">製法について</a></li>
+            <li class="item"><a href="#syurui">種類について</a></li>
+            <li class="item"><a href="#mio">- 澪 Mio</a></li>
+            <li class="item"><a href="#kohaku">- 琥珀 Kohaku</a></li>
+            <li class="item"><a href="#ryokusai">- 緑祭 Ryokusai</a></li>
+            <li class="item"><a href="#ouka">- 桜花 Ouka</a></li>
+            <li class="item"><a href="#kokuyou">- 黒曜 Kokuyou</a></li>
+            <li class="item"><a href="#kokuyou">- 黒曜 Kokuyou</a></li>
+            <!-- 商品のメニュー（リスト）がひとつ多い -->
+          </ul>
+          <div class="btn">
+            <!-- 間違い２ -->
+            <!-- 購入するの後ろに開始タグが残ってしまっている -->
+            <p><a href="#">購入する<</a></p>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="bg">
+        <section class="sec01">
+          <div class="logoFlex" id="about">
+            <h2 class="logo"><img src="img/logo2.png" alt="メインロゴ" /></h2>
+            <img class="cc-left" src="img/cc-a.png" />
+            <img class="cc-right" src="img/cc-b.png" />
+            <img class="cc-left" src="img/cc-c.png" />
+            <img class="cc-right" src="img/cc-d.png" />
+            <img class="cc-left" src="img/cc-e.png" />
+            <img class="cc-right" src="img/cc-f.png" />
+            <span></span>
+          </div>
+          <img class="ice1" src="img/ice1.png" />
+          <img class="ice2" src="img/ice2.png" />
+          <img class="ice3" src="img/ice3.png" />
+          <img class="ice4" src="img/ice4.png" />
+          <img class="ice5" src="img/ice5.png" />
+          <img class="ice6" src="img/ice6.png" />
+          <img class="ice7" src="img/ice7.png" />
+          <img class="ice8" src="img/ice1.png" />
+          <img class="ice9" src="img/ice3.png" />
+          <!-- <img class="ice10" src="img/ice6.png" />
+          <img class="ice11" src="img/ice5.png" />
+          <img class="ice12" src="img/ice7.png" /> -->
+        </section>
+      </div>
+      <div class="bg2">
+        <section class="sec02" id="seihou">
+          <h2 class="seihouTitle">製法について</h2>
+          <div class="itemFlex1">
+            <img src="img/kori-main.png" />
+            <div class="itemFlex1Text">
+              <h3>子氷（こおり）は、</h3>
+              <h4>
+                日本の伝統的な和菓子と冷たい氷の絶妙な冷たさを楽しむことができる、和スイーツです。<br />
+                この特別なお菓子は、口に含むとひんやりとした涼しさと、口の中でふわっと広がる和の味わいが楽しむ事ができるように特別な製法で作成しています。
+              </h4>
+            </div>
+          </div>
+          <div class="itemFlex2">
+            <div class="itemFlex2Text">
+              <h3 h3>子氷（こおり）は、</h3>
+              <h4>
+                氷の表面に和菓子の素材を結晶化させ、氷の中に和菓子の風味を閉じ込めることで、独特の食感と味わいを実現しています。そのため、氷菓子氷は一口食べるだけで、日本の伝統的な和菓子の風味を存分に楽しむことができるように、職人の熟練した技術と手間暇をかけて行われます。
+              </h4>
+            </div>
+            <div class="itemFlex2Img">
+              <img class="syokunin1" src="img/syokunin2.png" />
+              <img class="syokunin2" src="img/syokunin1.png" />
+            </div>
+          </div>
+        </section>
+        <img class="obi" src="img/obi.png" id="syurui" />
+        <img class="obiSp" src="img/obi-sp.png" id="syurui" />
+        <section class="sec03">
+          <div class="itemBoxL" id="mio">
+            <div class="itemImg">
+              <img class="cc" src="img/mio-cc.png" />
+              <div class="img">
+                <img src="img/mio.png" />
+                <h3 class="title">澪 Mio</h3>
+              </div>
+            </div>
+            <div class="itemText">
+              <h4>澪Mioは、</h4>
+              <p>
+                ミントの風味が凝縮されたシロップがかけられています。見た目は清涼感を感じさせる一方で、一口食べると、ミントのさわやかな香りと風味が口の中に広がり、口の中を心地よく冷やしてくれます
+              </p>
+            </div>
+          </div>
+          <div class="komonR">
+            <img src="img/komon.png" />
+          </div>
+          <div class="itemBoxR mt-50vh" id="kohaku">
+            <div class="itemImg">
+              <img class="cc" src="img/kohaku-cc.png" />
+              <div class="img">
+                <img src="img/kohaku.png" />
+                <h3 class="title">琥珀 Kohaku</h3>
+              </div>
+            </div>
+            <div class="itemText">
+              <h4>琥珀 Kohakuは、</h4>
+              <p>
+                蜜の粘り気が感じられる蜜がまんべんなく塗り、蜜の艶やかさが感じられます。一口食べると、口の中には蜜の甘さが広がります。蜜の風味は深く、芳醇でありながら、口当たりは軽やかで優しさに満ちています。
+              </p>
+            </div>
+          </div>
+          <div class="komonL">
+            <img src="img/komon2.png" />
+          </div>
+          <div class="itemBoxL mt-50vh" id="ryokusai">
+            <div class="itemImg">
+              <img class="cc" src="img/ryokusai-cc.png" />
+              <div class="img">
+                <img src="img/ryokusai.png" />
+                <h3 class="title">緑祭 Ryokusai</h3>
+              </div>
+            </div>
+            <div class="itemText">
+              <h4>緑祭 Ryokusaiは、</h4>
+              <p>
+                京都の宇治抹茶を使用しています。表面には滑らかな氷の層があり、その上にほんのりと抹茶の苦みが感じられる粉末がまぶされています。一口食べると、ふわりと広がる抹茶の香りが口の中に広がり、涼やかな清涼感をもたらします。
+              </p>
+            </div>
+          </div>
+          <div class="komonR">
+            <img src="img/komon3.png" />
+          </div>
+          <div class="itemBoxR mt-50vh" id="ouka">
+            <div class="itemImg">
+              <img class="cc" src="img/ouka-cc.png" />
+              <div class="img">
+                <!-- 間違い９ -->
+                <!-- 画像が表示されていない -->
+                <img src="img/ouka.png" />
+                <h3 class="title">桜花 Ouka</h3>
+              </div>
+            </div>
+            <div class="itemText">
+              <h4>桜花 Oukaは、</h4>
+              <p>
+                桜の花びらや桜の葉から抽出されたエキスを使用しています。見た目は透明な氷の層で、その表面には淡いピンク色の桜の花びらが散りばめられています。
+                <!-- 間違い１７ -->
+                <!-- 余計な改行が入ってしまっている -->
+                <br /><br /><br />一口食べると、ふわりと桜の香りが鼻腔に広がり、春の訪れを感じさせます。
+              </p>
+            </div>
+          </div>
+          <div class="komonL">
+            <img src="img/komon4.png" />
+          </div>
+          <div class="itemBoxL mt-50vh" id="kokuyou">
+            <div class="itemImg">
+              <img class="cc" src="img/kokuyou-cc.png" />
+              <div class="img">
+                <img src="img/kokuyou.png" />
+                <h3 class="title">黒曜 Kokuyou</h3>
+              </div>
+            </div>
+            <div class="itemText">
+              <h4>黒曜 Kokuyouは、</h4>
+              <p>
+                あんこの粒やペーストが散りばめられています。一口食べると、ほんのりとした甘さと、あんこの濃厚な風味が口の中に広がります。さっぱりとしている一方で、あんこの甘みとねっとりした食感が特徴です。
+              </p>
+            </div>
+          </div>
+          <div class="komonR pb-50vh">
+            <!-- 間違い１０ -->
+            <!-- 画像が表示されていない -->
+            <img src="img/komon55.png" />
+            <!-- <img src="img/komon5.png" /> -->
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="bnBox">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <small>Copyright © Norihito Ishimura 2024.</small>
+    </footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".openbtn").click(function () {
+        //ボタンがクリックされたら
+        $(this).toggleClass("active");
+        $(".sideNav").toggleClass("active");
+      });
+    </script>
+    <!-- <script src="js/navibth.js"></script> -->
+  </body>
+</html>

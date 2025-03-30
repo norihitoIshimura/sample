@@ -1,0 +1,926 @@
+@charset "UTF-8";
+/* -------------------------------------------------------------------------- */
+/*	breakPoint
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*	style
+/* -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+#main header .header .mainImgPc {
+  display: block;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  #main header .header .mainImgPc {
+    display: none;
+  }
+}
+#main header .header .mainImgPc img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#main header .header .mainImgSp {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  #main header .header .mainImgSp {
+    display: block;
+  }
+}
+#main header .header .mainImgSp img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#main header .header .mainCc {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-43%, -50%);
+}
+@media screen and (max-width: 1279px) {
+  #main header .header .mainCc {
+    left: 46%;
+    transform: translate(-46%, -50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  #main header .header .mainCc {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+#main header .header .mainCc .ccImg {
+  /* width: auto; */
+  /* 間違い3 */
+  /* デザインカンプト比べてキャッチコピーが小さい */
+  width: auto;
+}
+@media screen and (max-width: 1279px) {
+  #main header .header .mainCc .ccImg {
+    width: 300px;
+  }
+}
+#main header .header .openbtn {
+  position: fixed;
+  z-index: 9999; /*ボタンを最前面に*/
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+@media screen and (max-width: 1279px) {
+  #main header .header .openbtn {
+    display: block;
+  }
+}
+#main header .header .openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #000;
+  width: 45%;
+}
+#main header .header .openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+#main header .header .openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+#main header .header .openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+#main header .header .openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+#main header .header .openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#main header .header .openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+#main header .header .sideNav {
+  background-color: #fff;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  font-family: "ヒラギノ明朝 Pro";
+}
+@media screen and (max-width: 1279px) {
+  #main header .header .sideNav {
+    position: fixed;
+    right: -300px;
+    transition: all 0.6s;
+    /* 間違い１７ */
+    /* 白枠の幅が狭い */
+    width: 200px;
+  }
+}
+#main header .header .sideNav .mainLogo {
+  margin: 30px auto;
+  width: 140px;
+}
+#main header .header .sideNav .navList {
+  margin: 0 auto;
+  width: 210px;
+}
+#main header .header .sideNav .navList li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 19px;
+  line-height: 2.2;
+}
+#main header .header .sideNav .btn {
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#main header .header .sideNav .btn a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  line-height: 60px;
+}
+#main header .header .sideNav.active {
+  right: 0;
+  overflow: hidden;
+}
+#main main {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg.jpg);
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+#main main .bg {
+  width: calc(100% - 300px);
+  height: 6000px;
+  position: relative;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg {
+    width: 100%;
+    height: 5200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg {
+    height: 3200px;
+  }
+}
+#main main .bg .sec01 .logoFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#main main .bg .sec01 .logoFlex .logo {
+  width: 214px;
+  padding: 178px 0 30px;
+  position: sticky;
+  top: 0;
+  margin-bottom: 240px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .logoFlex .logo {
+    text-align: center;
+  }
+  #main main .bg .sec01 .logoFlex .logo img {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .logoFlex .logo img {
+    text-align: center;
+    margin-left: 40px;
+    width: 152px;
+  }
+}
+#main main .bg .sec01 .logoFlex .cc-left {
+  width: 50%;
+  /* 間違い４ */
+  /* 左の縦書きキャッチコピーが中央によっている（ロゴによっている） */
+  margin-left: -110px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .logoFlex .cc-left {
+    width: 40%;
+    margin-left: -90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .logoFlex .cc-left {
+    width: 30%;
+    margin-left: -28%;
+  }
+}
+#main main .bg .sec01 .logoFlex .cc-right {
+  width: 50%;
+  margin-left: 170%;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .logoFlex .cc-right {
+    width: 30%;
+    /* 間違い18 */
+    /* キャッチの位置が異なる */
+    margin-left: 66%;
+    /* margin-left: 96%; */
+  }
+}
+#main main .bg .sec01 .logoFlex span {
+  width: 2px;
+  height: 176px;
+  margin: 0 auto 72px;
+  padding-right: 60px;
+  border-left: 2px solid #000;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .logoFlex span {
+    padding-right: 50px;
+    /* 間違い１９ */
+    border-left: 4px solid #000;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .logoFlex span {
+    padding-right: 0px;
+  }
+}
+#main main .bg .sec01 .ice1 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 174px;
+  left: 0;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice1 {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice1 {
+    top: 340px;
+    width: 42%;
+  }
+}
+#main main .bg .sec01 .ice2 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice2 {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice2 {
+    width: 28%;
+  }
+}
+#main main .bg .sec01 .ice3 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 606px;
+  right: 0;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice3 {
+    width: 32%;
+  }
+}
+#main main .bg .sec01 .ice4 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 1168px;
+  /* 間違い5 */
+  /* 背景の青色の多角形の位置がデザインカンプと比べて右によっている。 */
+  left: 60%;
+  left: 40%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice4 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice4 {
+    top: 1040px;
+  }
+}
+#main main .bg .sec01 .ice5 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 1736px;
+  left: 0px;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice5 {
+    width: 20%;
+    top: 1400px;
+  }
+}
+#main main .bg .sec01 .ice6 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 2434px;
+  left: 310px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice6 {
+    left: 40px;
+    width: 50%;
+    display: none;
+  }
+}
+#main main .bg .sec01 .ice7 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 3020px;
+  right: 0px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice7 {
+    width: 30%;
+    top: 3420px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice7 {
+    top: 4100px;
+    width: 20%;
+  }
+}
+#main main .bg .sec01 .ice8 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 3420px;
+  left: 5%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice8 {
+    width: 30%;
+    top: 3200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice8 {
+    top: 2100px;
+    width: 40%;
+  }
+}
+#main main .bg .sec01 .ice9 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 4300px;
+  right: 0%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice9 {
+    width: 30%;
+    top: 2400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice9 {
+    top: 2800px;
+    width: 40%;
+  }
+}
+#main main .bg .sec01 .ice10 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 5000px;
+  left: 40%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice10 {
+    width: 38%;
+    top: 4300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice10 {
+    top: 3900px;
+    left: 4%;
+    width: 54%;
+  }
+}
+#main main .bg .sec01 .ice11 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 6000px;
+  left: 0%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice11 {
+    width: 14%;
+    top: 4600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice11 {
+    top: 3100px;
+    width: 20%;
+  }
+}
+#main main .bg .sec01 .ice12 {
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 6300px;
+  right: 0%;
+  z-index: 0;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg .sec01 .ice12 {
+    width: 30%;
+    top: 5200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg .sec01 .ice12 {
+    top: 4300px;
+    width: 40%;
+  }
+}
+#main main .bg .sec01 [class^="ice"] {
+  z-index: 0;
+}
+#main main .obi {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  #main main .obi {
+    display: none;
+  }
+}
+#main main .obiSp {
+  display: none;
+}
+@media screen and (max-width: 1279px) {
+  #main main .obiSp {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .obiSp {
+    display: block;
+    width: 100%;
+  }
+}
+#main main .bg2 .sec02 .seihouTitle {
+  width: 90%;
+  font-size: 2.8vw;
+  font-family: "ヒラギノ明朝 Pro";
+  /* 間違い１２ */
+  /* フォントがデザインカンプト比べて太い */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50vh;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .seihouTitle {
+    width: 100%;
+    font-size: 3.8vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .seihouTitle {
+    width: 100%;
+    font-size: 30px;
+  }
+}
+#main main .bg2 .sec02 .itemFlex1 {
+  width: 90%;
+  /* 間違い６ */
+  /* デザインカンプでは画像左に配置されているテキストが画面では下に配置されいる */
+  /* display: flex; */
+  justify-content: space-between;
+  margin-bottom: 50vh;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex1 {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex1 {
+    width: 94%;
+    margin: 0 auto 160px;
+    flex-direction: column;
+  }
+}
+#main main .bg2 .sec02 .itemFlex1 img {
+  width: 50%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex1 img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex1 img {
+    width: 100%;
+    order: 2;
+  }
+}
+#main main .bg2 .sec02 .itemFlex1 .itemFlex1Text {
+  width: 30%;
+  margin-right: 18%;
+  font-size: 1.2vw;
+  line-height: 2;
+  font-family: "ヒラギノ明朝 Pro";
+}
+#main main .bg2 .sec02 .itemFlex1 .itemFlex1Text h4,
+#main main .bg2 .sec02 .itemFlex1 .itemFlex1Text h3 {
+  font-weight: normal;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex1 .itemFlex1Text {
+    font-size: 2vw;
+    width: 70%;
+    margin: 50px 0 0 150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex1 .itemFlex1Text {
+    width: 100%;
+    font-size: 16px;
+    order: 1;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+#main main .bg2 .sec02 .itemFlex2 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 50vh 6%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex2 {
+    margin: 0 auto;
+  }
+}
+#main main .bg2 .sec02 .itemFlex2 .itemFlex2Text {
+  width: 40%;
+  font-size: 1.2vw;
+  line-height: 2;
+  font-family: "ヒラギノ明朝 Pro";
+}
+#main main .bg2 .sec02 .itemFlex2 .itemFlex2Text h4,
+#main main .bg2 .sec02 .itemFlex2 .itemFlex2Text h3 {
+  font-weight: normal;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Text {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Text {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+#main main .bg2 .sec02 .itemFlex2 .itemFlex2Img {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Img img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Img {
+    flex-direction: column;
+  }
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Img img {
+    width: 80%;
+  }
+}
+#main main .bg2 .sec02 .itemFlex2 .itemFlex2Img .syokunin1 {
+  /* 間違い７ */
+  /* 画像の位置がデザインカンプと比べて異なっている */
+  margin-top: 100px;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Img .syokunin1 {
+    margin-top: 50px;
+  }
+}
+#main main .bg2 .sec02 .itemFlex2 .itemFlex2Img .syokunin2 {
+  margin-top: -200px;
+  margin-left: 8%;
+  height: 100%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Img .syokunin2 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec02 .itemFlex2 .itemFlex2Img .syokunin2 {
+    margin-top: 50px;
+    margin-left: 14%;
+  }
+}
+#main main .bg2 .sec03 {
+  width: calc(80% - 300px);
+  font-family: "ヒラギノ明朝 Pro";
+  font-weight: normal;
+  margin: 0 10%;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec03 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 {
+    width: 92%;
+    margin: 0 4%;
+  }
+}
+#main main .bg2 .sec03 .komonR {
+  text-align: right;
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec03 .komonR img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .komonR img {
+    width: 100%;
+  }
+}
+#main main .bg2 .sec03 .komonL {
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec03 .komonL img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .komonL img {
+    width: 100%;
+  }
+}
+#main main .bg2 .sec03 .itemBoxL {
+  width: 100%;
+  max-width: 724px;
+  height: 668px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec03 .itemBoxL {
+    max-width: 624px;
+  }
+}
+#main main .bg2 .sec03 .itemBoxL .itemImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec03 .itemBoxL .itemImg {
+    height: 82%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxL .itemImg {
+    margin-bottom: 10px;
+    height: 50%;
+  }
+}
+#main main .bg2 .sec03 .itemBoxL .itemImg .cc {
+  position: absolute;
+  top: 0;
+  /* 間違い８ */
+  /* 商品左のキャッチコピーが中心によっている */
+  left: 100px;
+  /* left: 0; */
+  z-index: 2;
+  width: 27.6%;
+}
+#main main .bg2 .sec03 .itemBoxL .itemImg .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main main .bg2 .sec03 .itemBoxL .itemImg .img img {
+  width: 100%;
+}
+#main main .bg2 .sec03 .itemBoxL .itemImg .img .title {
+  font-size: 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxL .itemImg .img .title {
+    font-size: 20px;
+  }
+}
+#main main .bg2 .sec03 .itemBoxL .itemText {
+  line-height: 1.4;
+  width: 100%;
+  font-size: 26px;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxL .itemText {
+    margin-top: 80px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+#main main .bg2 .sec03 .itemBoxL .itemText h4 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxL .itemText h4 {
+    font-size: 20px;
+  }
+}
+#main main .bg2 .sec03 .itemBoxR {
+  width: 100%;
+  max-width: 724px;
+  height: 668px;
+  margin-left: auto;
+}
+#main main .bg2 .sec03 .itemBoxR .itemImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1279px) {
+  #main main .bg2 .sec03 .itemBoxR .itemImg {
+    height: 82%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxR .itemImg {
+    margin-bottom: 80px;
+    height: 50%;
+  }
+}
+#main main .bg2 .sec03 .itemBoxR .itemImg .cc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 27.6%;
+}
+#main main .bg2 .sec03 .itemBoxR .itemImg .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main main .bg2 .sec03 .itemBoxR .itemImg .img img {
+  width: 100%;
+}
+#main main .bg2 .sec03 .itemBoxR .itemImg .img .title {
+  font-size: 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxR .itemImg .img .title {
+    font-size: 20px;
+  }
+}
+#main main .bg2 .sec03 .itemBoxR .itemText {
+  line-height: 1.4;
+  width: 100%;
+  font-size: 26px;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxR .itemText {
+    margin-top: 80px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+#main main .bg2 .sec03 .itemBoxR .itemText h4 {
+  /* 間違い１５ */
+  /* テキストが右によっている */
+  text-align: right;
+  /* text-align: center; */
+  font-size: 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 600px) {
+  #main main .bg2 .sec03 .itemBoxR .itemText h4 {
+    font-size: 20px;
+  }
+}
+#main .mt-50vh {
+  margin-top: 50vh;
+}
+@media screen and (max-width: 600px) {
+  #main .mt-50vh {
+    margin-top: 25vh;
+  }
+}
+#main .pb-50vh {
+  padding-bottom: 50vh;
+}
+
+footer {
+  position: relative;
+  background-color: #7babdc;
+  height: 100%;
+  width: calc(100% - 300px);
+  /* 間違い１６ */
+  /* フッターの色が薄い */
+  opacity: 0.8;
+}
+@media screen and (max-width: 1279px) {
+  footer {
+    width: 100%;
+    height: 100%;
+  }
+}
+footer .bnBox {
+  display: flex;
+  padding: 50px 50px 0;
+  width: auto;
+  justify-content: space-around;
+  /* 間違い１１ */
+  /* フッターの画像(白枠)が正しく表示されていない */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap; */
+}
+@media screen and (max-width: 600px) {
+  footer .bnBox {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+footer .bnBox div {
+  width: 320px;
+  height: 100px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 600px) {
+  footer .bnBox div {
+    width: 100%;
+  }
+  footer .bnBox div:last-child {
+    /* 間違い２０ */
+    display: none;
+  }
+}
+footer .bnBox div:last-child {
+  margin-bottom: 100px;
+}
+footer small {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  /* 間違い１３ */
+  /* コピーライトが白になっている */
+  color: #fff;
+} /*# sourceMappingURL=style.css.map */

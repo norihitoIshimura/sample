@@ -1,0 +1,804 @@
+/* -------------------------------------------------------------------------- */
+/*	breakPoint
+/* -------------------------------------------------------------------------- */
+
+$breakpoint: (
+  tab: "screen and (max-width: 1279px)",
+  sp: "screen and (max-width: 600px)",
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*	style
+/* -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+#main {
+  header {
+    .header {
+      .mainImgPc {
+        display: block;
+        position: relative;
+        @include mq(sp) {
+          display: none;
+        }
+        img {
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }
+      }
+      .mainImgSp {
+        display: none;
+        @include mq(sp) {
+          display: block;
+        }
+        img {
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }
+      }
+      .mainCc {
+        position: absolute;
+        top: 50%;
+        left: 43%;
+        transform: translate(-43%, -50%);
+        @include mq(tab) {
+          left: 46%;
+          transform: translate(-46%, -50%);
+        }
+        @include mq(sp) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .ccImg {
+          width: auto;
+          @include mq(tab) {
+            width: 300px;
+          }
+        }
+      }
+      .openbtn {
+        position: fixed;
+        z-index: 9999; /*ボタンを最前面に*/
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        display: none;
+        @include mq(tab) {
+          display: block;
+        }
+      }
+      .openbtn span {
+        display: inline-block;
+        transition: all 0.4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #000;
+        width: 45%;
+      }
+      .openbtn span:nth-of-type(1) {
+        top: 15px;
+      }
+      .openbtn span:nth-of-type(2) {
+        top: 23px;
+      }
+      .openbtn span:nth-of-type(3) {
+        top: 31px;
+      }
+      .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+      }
+      .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+      }
+      .openbtn.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+      }
+      .sideNav {
+        background-color: #fff;
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 4;
+        font-family: "ヒラギノ明朝 Pro";
+        // opacity: 0.9;
+        @include mq(tab) {
+          position: fixed;
+          right: -300px;
+          transition: all 0.6s;
+        }
+        .mainLogo {
+          margin: 30px auto;
+          width: 140px;
+        }
+        .navList {
+          margin: 0 auto;
+          width: 210px;
+          li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 19px;
+            line-height: 2.2;
+          }
+        }
+        .btn {
+          background-color: #000;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          a {
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            line-height: 60px;
+          }
+        }
+      }
+      .sideNav.active {
+        right: 0;
+        overflow: hidden;
+      }
+    }
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    .bg {
+      width: calc(100% - 300px);
+      // height: 680vh;
+      height: 6000px;
+      position: relative;
+      @include mq(tab) {
+        width: 100%;
+        // height: 420vh;
+        height: 5200px;
+      }
+      @include mq(sp) {
+        // height: 360vh;
+        height: 3200px;
+      }
+      .sec01 {
+        .logoFlex {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          .logo {
+            width: 214px;
+            padding: 178px 0 30px;
+            position: sticky;
+            top: 0;
+            // left: 50%;
+            // transform: translate(0, -50%);
+            margin-bottom: 240px;
+            @include mq(tab) {
+              text-align: center;
+              img {
+                width: 180px;
+              }
+            }
+            @include mq(sp) {
+              img {
+                text-align: center;
+                margin-left: 40px;
+                width: 152px;
+              }
+            }
+          }
+          .cc-left {
+            width: 50%;
+            margin-left: -170%;
+            @include mq(tab) {
+              width: 40%;
+              margin-left: -90%;
+            }
+            @include mq(sp) {
+              width: 30%;
+              margin-left: -28%;
+            }
+          }
+          .cc-right {
+            width: 50%;
+            margin-left: 170%;
+            @include mq(tab) {
+              width: 40%;
+              margin-left: 140%;
+            }
+            @include mq(sp) {
+              width: 30%;
+              margin-left: 96%;
+            }
+          }
+          span {
+            width: 2px;
+            height: 176px;
+            margin: 0 auto 72px;
+            padding-right: 60px;
+            border-left: 2px solid #000;
+            @include mq(tab) {
+              padding-right: 50px;
+            }
+            @include mq(sp) {
+              padding-right: 0px;
+            }
+          }
+        }
+        .ice1 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 174px;
+          left: 0;
+          @include mq(tab) {
+            width: 32%;
+          }
+          @include mq(sp) {
+            top: 340px;
+            width: 42%;
+          }
+        }
+        .ice2 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 0;
+          right: 0;
+          @include mq(tab) {
+            width: 32%;
+          }
+          @include mq(sp) {
+            width: 28%;
+          }
+        }
+        .ice3 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 606px;
+          right: 0;
+          @include mq(tab) {
+            width: 32%;
+          }
+        }
+        .ice4 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 1168px;
+          left: 40%;
+          @include mq(tab) {
+            width: 50%;
+          }
+          @include mq(sp) {
+            top: 1040px;
+          }
+        }
+        .ice5 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 1736px;
+          left: 0px;
+          // @include mq(tab) {
+          //   width: 50%;
+          // }
+          @include mq(sp) {
+            width: 20%;
+            top: 1400px;
+          }
+        }
+        .ice6 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 2434px;
+          left: 310px;
+          @include mq(tab) {
+            left: 40px;
+            width: 50%;
+            display: none;
+          }
+        }
+        .ice7 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 3020px;
+          right: 0px;
+          @include mq(tab) {
+            width: 30%;
+            top: 3420px;
+          }
+          @include mq(sp) {
+            top: 4100px;
+            width: 20%;
+          }
+        }
+        .ice8 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 3420px;
+          left: 5%;
+          @include mq(tab) {
+            width: 30%;
+            top: 3200px;
+          }
+          @include mq(sp) {
+            top: 2100px;
+            width: 40%;
+          }
+        }
+        .ice9 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 4300px;
+          right: 0%;
+          @include mq(tab) {
+            width: 30%;
+            top: 2400px;
+          }
+          @include mq(sp) {
+            top: 2800px;
+            width: 40%;
+          }
+        }
+        .ice10 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 5000px;
+          left: 40%;
+          @include mq(tab) {
+            width: 38%;
+            top: 4300px;
+          }
+          @include mq(sp) {
+            top: 3900px;
+            left: 4%;
+            width: 54%;
+          }
+        }
+        .ice11 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 6000px;
+          left: 0%;
+          @include mq(tab) {
+            width: 14%;
+            top: 4600px;
+          }
+          @include mq(sp) {
+            top: 3100px;
+            width: 20%;
+          }
+        }
+        .ice12 {
+          mix-blend-mode: multiply;
+          position: absolute;
+          top: 6300px;
+          right: 0%;
+          z-index: 0;
+          @include mq(tab) {
+            width: 30%;
+            top: 5200px;
+          }
+          @include mq(sp) {
+            top: 4300px;
+            width: 40%;
+          }
+        }
+        [class^="ice"] {
+          z-index: 0;
+        }
+      }
+    }
+    .obi {
+      // mix-blend-mode: multiply;
+      // position: absolute;
+      // top: 7200px;
+      width: 100%;
+      // @include mq(tab) {
+      //   top: 6000px;
+      // }
+      @include mq(sp) {
+        display: none;
+      }
+    }
+    .obiSp {
+      display: none;
+      @include mq(tab) {
+        display: none;
+      }
+      @include mq(sp) {
+        display: block;
+        width: 100%;
+      }
+    }
+    .bg2 {
+      // background-image: url(../img/bg.jpg);
+      // background-size: 100%;
+      // background-repeat: repeat-y;
+      // position: relative;
+      .sec02 {
+        .seihouTitle {
+          width: 90%;
+          font-size: 2.8vw;
+          font-family: "ヒラギノ明朝 Pro";
+          font-weight: normal;
+          text-align: center;
+          margin-bottom: 50vh;
+          @include mq(tab) {
+            width: 100%;
+            font-size: 3.8vw;
+          }
+          @include mq(sp) {
+            width: 100%;
+            font-size: 30px;
+            // margin-bottom: 10vh;
+          }
+        }
+        .itemFlex1 {
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 50vh;
+          @include mq(tab) {
+            width: 100%;
+            flex-direction: column;
+          }
+          @include mq(sp) {
+            width: 94%;
+            margin: 0 auto 160px;
+            // padding-top: 360vh;
+            flex-direction: column;
+          }
+          img {
+            width: 50%;
+            @include mq(tab) {
+              width: 80%;
+            }
+            @include mq(sp) {
+              width: 100%;
+              order: 2;
+            }
+          }
+          .itemFlex1Text {
+            width: 30%;
+            margin-right: 18%;
+            // font-size: 24px;
+            font-size: 1.2vw;
+            line-height: 2;
+            font-family: "ヒラギノ明朝 Pro";
+            h4,
+            h3 {
+              font-weight: normal;
+            }
+            @include mq(tab) {
+              font-size: 2vw;
+              width: 70%;
+              margin: 50px 0 0 150px;
+            }
+            @include mq(sp) {
+              width: 100%;
+              font-size: 16px;
+              order: 1;
+              margin: 0;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .itemFlex2 {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto 50vh 6%;
+          @include mq(tab) {
+            margin: 0 auto;
+          }
+          .itemFlex2Text {
+            width: 40%;
+            font-size: 1.2vw;
+            line-height: 2;
+            font-family: "ヒラギノ明朝 Pro";
+            h4,
+            h3 {
+              font-weight: normal;
+            }
+
+            @include mq(tab) {
+              // width: 40%;
+              font-size: 2vw;
+            }
+            @include mq(sp) {
+              font-size: 16px;
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          }
+          .itemFlex2Img {
+            display: flex;
+            flex-wrap: wrap;
+            @include mq(tab) {
+              img {
+                width: 50%;
+              }
+            }
+            @include mq(sp) {
+              flex-direction: column;
+              img {
+                width: 80%;
+              }
+            }
+            .syokunin1 {
+              margin-top: 200px;
+              @include mq(sp) {
+                margin-top: 50px;
+              }
+            }
+            .syokunin2 {
+              margin-top: -200px;
+              margin-left: 8%;
+              height: 100%;
+              @include mq(tab) {
+                margin-left: 0;
+              }
+              @include mq(sp) {
+                margin-top: 50px;
+                margin-left: 14%;
+              }
+            }
+          }
+        }
+      }
+      .sec03 {
+        // padding-top: 980vh;
+        width: calc(80% - 300px);
+        font-family: "ヒラギノ明朝 Pro";
+        font-weight: normal;
+        margin: 0 10%;
+        @include mq(tab) {
+          // padding-top: 680vh;
+          width: 80%;
+        }
+        @include mq(sp) {
+          width: 92%;
+          margin: 0 4%;
+        }
+
+        .komonR {
+          text-align: right;
+          mix-blend-mode: multiply;
+          @include mq(tab) {
+            img {
+              width: 50%;
+            }
+          }
+          @include mq(sp) {
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .komonL {
+          mix-blend-mode: multiply;
+          @include mq(tab) {
+            img {
+              width: 50%;
+            }
+          }
+          @include mq(sp) {
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .itemBoxL {
+          width: 100%;
+          max-width: 724px;
+          height: 668px;
+          @include mq(tab) {
+            max-width: 624px;
+          }
+          .itemImg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin-bottom: 100px;
+            @include mq(tab) {
+              height: 82%;
+            }
+            @include mq(sp) {
+              margin-bottom: 10px;
+              height: 50%;
+            }
+            .cc {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+              width: 27.6%;
+            }
+            .img {
+              position: absolute;
+              top: 0;
+              right: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              img {
+                width: 100%;
+              }
+              .title {
+                font-size: 30px;
+                font-weight: normal;
+                @include mq(sp) {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+          .itemText {
+            line-height: 1.4;
+            width: 100%;
+            font-size: 26px;
+            @include mq(sp) {
+              margin-top: 80px;
+              font-size: 16px;
+              line-height: 1.6;
+            }
+            h4 {
+              text-align: center;
+              font-size: 30px;
+              font-weight: normal;
+              @include mq(sp) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+        .itemBoxR {
+          width: 100%;
+          max-width: 724px;
+          height: 668px;
+          margin-left: auto;
+          .itemImg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin-bottom: 100px;
+            @include mq(tab) {
+              height: 82%;
+            }
+            @include mq(sp) {
+              margin-bottom: 80px;
+              height: 50%;
+            }
+            .cc {
+              position: absolute;
+              top: 0;
+              right: 0;
+              z-index: 2;
+              width: 27.6%;
+            }
+            .img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              img {
+                width: 100%;
+              }
+              .title {
+                font-size: 30px;
+                font-weight: normal;
+                @include mq(sp) {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+          .itemText {
+            line-height: 1.4;
+            width: 100%;
+            font-size: 26px;
+            @include mq(sp) {
+              margin-top: 80px;
+              font-size: 16px;
+              line-height: 1.6;
+            }
+            h4 {
+              text-align: center;
+              font-size: 30px;
+              font-weight: normal;
+              @include mq(sp) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mt-50vh {
+    margin-top: 50vh;
+    @include mq(sp) {
+      margin-top: 25vh;
+    }
+  }
+  .pb-50vh {
+    padding-bottom: 50vh;
+  }
+}
+footer {
+  position: relative;
+  background-color: #7babdc;
+  height: 100%;
+  width: calc(100% - 300px);
+  // text-align: center;
+  @include mq(tab) {
+    width: 100%;
+    height: 100%;
+  }
+  // @include mq(sp) {
+  //   height: 100%;
+  // }
+  .bnBox {
+    display: flex;
+    padding: 50px 50px 0;
+    width: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include mq(tab) {
+      // width: 100%;
+    }
+    @include mq(sp) {
+      // width: 100%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    div {
+      width: 320px;
+      height: 100px;
+      background-color: #fff;
+      margin-bottom: 50px;
+      @include mq(tab) {
+        // width: clac(100% - 60px);
+      }
+      @include mq(sp) {
+        width: 100%;
+      }
+    }
+    div:nth-child(5) {
+      margin-bottom: 100px;
+    }
+  }
+  small {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+}
